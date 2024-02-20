@@ -50,7 +50,7 @@ const Contact = () => {
       setIsLoading(false);
       setCurrentAnimation("idle")
       console.log(error);
-      showAlert({show: true, text: "I didn't receive your message",
+      showAlert({show: true, text: "I didn't receive your message :(",
         type: "danger"})
     })
   };
@@ -153,7 +153,6 @@ const Contact = () => {
           </Suspense>
         </Canvas>
       </div>
-
     </section>
   )
 }
