@@ -68,6 +68,17 @@ const Home = () => {
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
 
+      <div className="absolute bottom-10 left-0 right-0 z-10 flex items-center justify-center">
+        {currentStage === 1 && (
+          <div className="popup">
+            {window.innerWidth < 768 ?
+              (<p>Swipe screen to move</p>) : 
+              (<p>Drag with mouse or use arrow keys to move</p>)
+            }
+          </div>
+        )}
+      </div>
+
       <Canvas 
         className={`w-full h-screen bg-transparent ${isRotating ? 
           'cursor-grabbing' : 'cursorgrab'}`}

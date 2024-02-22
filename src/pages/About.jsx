@@ -15,7 +15,8 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>Aspiring Software Engineer, currently in Senior year at
-        Rhodes College in Memphis, Tennessee.</p>
+        Rhodes College in Memphis, Tennessee. I'm looking for entry
+        level positions to start my software engineering career.</p>
       </div>
 
       <div className="py-10 flex flex-col">

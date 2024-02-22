@@ -25,7 +25,8 @@ const renderContent = {
     ),
     2: (
         <InfoBox 
-            text="Senior at Rhodes College, set to graduate in May 2024"
+            text="Senior at Rhodes College, set to graduate in May 2024.
+            Currently looking for entry level positions."
             link="/about"
             btnText="Learn more"
         />
@@ -40,7 +41,7 @@ const renderContent = {
     ),
     4: (
         <InfoBox 
-            text="Need a project done or looking for a developer? 
+            text="Looking for a developer or need a project done? 
             I'm just a few keystrokes away"
             link="/contact"
             btnText="Let's talk"

@@ -26,8 +26,33 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import java from './java.svg'
+import python from './python.svg'
+import azure from './azure.svg'
+import c_language from './C_Language.svg'
+import c_sharp from './c-sharp.svg'
+import numpy from './numpy.svg'
+import pandas from './pandas.png'
+import powershell from './powershell.svg'
+import pytorch from './pytorch.svg'
+import racket from './racket.svg'
+import spring from './spring.svg'
+import tensorflow from './tensorflow.svg'
+
 
 export {
+    azure,
+    python,
+    c_language,
+    c_sharp,
+    numpy,
+    pandas,
+    powershell,
+    pytorch,
+    racket,
+    spring,
+    tensorflow,
+    java,
     css,
     express,
     git,
