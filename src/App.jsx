@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { profile, readout, work, projects, skills, credentials } from './content'
+import { profile, asOf, readout, work, projects, skills, credentials } from './content'
 
 // three.js is most of the bundle; load it after the text has painted.
 const HubScene = lazy(() => import('./HubScene'))
@@ -44,7 +44,7 @@ const App = () => {
             <Suspense fallback={<div className="hub-scene" />}>
               <HubScene />
             </Suspense>
-            <figcaption>90 nodes, one for each Azure subscription I support</figcaption>
+            <figcaption>An illustration of the 90+ Azure subscriptions our two-person cloud team supports</figcaption>
           </figure>
         </section>
 
@@ -90,7 +90,7 @@ const App = () => {
                 <p className="project-desc">{p.description}</p>
                 {p.link
                   ? <External href={p.link} className="project-link">View code on GitHub</External>
-                  : <p className="project-link project-link-muted">Code available on request</p>}
+                  : <p className="project-link project-link-muted">Academic project; no public repository</p>}
               </li>
             ))}
           </ul>
@@ -121,7 +121,7 @@ const App = () => {
           <External href={profile.linkedin} className="btn">Connect on LinkedIn</External>
           <External href={profile.github} className="btn btn-ghost">GitHub</External>
         </div>
-        <p className="footer-meta">Built with React and three.js · Hosted on GitHub Pages</p>
+        <p className="footer-meta">Figures as of {asOf}</p>
       </footer>
     </>
   )

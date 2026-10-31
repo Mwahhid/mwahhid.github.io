@@ -1,21 +1,26 @@
-// All site copy lives here. Source of truth is ../cv.md; keep public-safe
-// (no internal project names, vendor names, or security configuration).
+// All site copy lives here. Source of truth is ../cv.md. Before editing, check
+// its public-safety rules and the career-coach skill's wording rules:
+// - no internal project names, vendor names, or employer security configuration
+// - "organization", not "hospital"; "governance and support", not "run Azure"
+// - no privileged-role count (kept off public channels, decided 2026-10-31)
+// - [IN PROGRESS] work stays present tense; prototypes are called prototypes
 
 export const profile = {
     name: "Mwahhid Majeed",
-    role: "Cloud Infrastructure Engineer",
+    role: "Cloud Infrastructure Engineer II",
     org: "St. Jude Children's Research Hospital",
     location: "Tennessee",
-    intro: "I run Azure for a research hospital: 90+ subscriptions, the automation that grants access safely, and the platform teams use to reach AI models.",
+    intro: "I build cloud automation and operate an enterprise AI model access platform used by 45+ teams. On a two-person cloud team, I provide governance and support for 90+ Azure subscriptions.",
     linkedin: "https://www.linkedin.com/in/mwahhid-majeed/",
     github: "https://github.com/Mwahhid",
 };
 
-// Shown as a status readout under the hero. Figures as of Oct 2026.
+// Shown as a status readout under the hero.
+export const asOf = "October 2026";
 export const readout = [
     { label: "Azure subscriptions supported", value: "90+" },
     { label: "Access requests automated", value: "562" },
-    { label: "Privileged roles removed", value: "600+" },
+    { label: "Teams on the AI platform", value: "45+" },
     { label: "AI platform users", value: "155+" },
 ];
 
@@ -28,22 +33,24 @@ export const work = [
                 title: "Cloud Infrastructure Engineer II",
                 dates: "Jun 2026 – Present",
                 points: [
-                    "Run enterprise Azure operations across 90+ subscriptions on a two-person cloud team.",
-                    "Administer an enterprise AI model access platform on Microsoft Foundry and Azure API Management: 155+ users, 175+ model deployments, 45+ teams.",
-                    "Lead a 5-engineer managed-services vendor team: assign work, mentor, and review Azure Policy rollouts, monitoring dashboards, and Key Vault secret rotation for production readiness.",
-                    "Deploy private-by-default with Bicep: private endpoints, private DNS, managed identity.",
-                    "Built a reporting platform that combines subscription, compliance, cost, and AI usage data, down to per-user and per-model detail.",
+                    "Provide governance and support for 90+ Azure subscriptions on a two-person cloud team.",
+                    "Operate the organization's enterprise AI model access platform on Microsoft Foundry and Azure API Management: 45+ teams, 155+ users, 175+ model deployments.",
+                    "Lead Azure delivery for a five-engineer managed-services vendor team: define requirements, mentor engineers, and review work for production readiness.",
+                    "Defined requirements and validated the production release of automated AI platform reporting on deployments, access, and team-level spend.",
+                    "Expanded operational reporting to combine subscription, compliance, service-request, cost, and AI usage data, with cost-center drill-through.",
+                    "Led AI integration and evaluation for a ticket-triage prototype (83% routing accuracy across 20 teams on 59 held-out tickets) and presented the live demo to leadership.",
+                    "Led a hands-on prompt-engineering lab for 50+ attendees and wrote AI setup guides for researchers and technologists.",
                 ],
             },
             {
                 title: "Cloud Infrastructure Engineer I",
                 dates: "Jul 2024 – Jun 2026",
                 points: [
-                    "Built and operated the hospital's centrally managed AI model access service.",
-                    "Designed a ServiceNow-to-Azure self-service workflow for role requests (PowerShell Azure Functions, RBAC, PIM/JIT). 562 requests so far, an estimated 100+ hours saved.",
-                    "Removed 600+ unnecessary standing privileged role assignments as the sole Azure-side executor of an enterprise privileged-role reduction.",
-                    "Owned monthly billing and chargeback for 90+ Azure subscriptions and 8+ AWS accounts.",
-                    "Wrote 80+ PowerShell, Python, and Bicep/ARM scripts and templates for administration, reporting, and access management.",
+                    "Implemented the organization's enterprise AI model access platform from a high-level architecture, designing key components and operating the service.",
+                    "Designed and built ServiceNow-to-Azure self-service access automation with PowerShell Azure Functions: 562 requests processed through October 2026, an estimated 100+ cloud-team hours saved.",
+                    "Executed every Azure-side change in an enterprise privileged-role reduction, partnering with the Identity team.",
+                    "Owned monthly Azure billing and chargeback for 90+ subscriptions, plus billing for 8+ AWS accounts.",
+                    "Wrote 80+ scripts and templates in PowerShell, Python, and Bicep/ARM for cloud administration, reporting, deployment, and access management.",
                 ],
             },
             {
@@ -76,45 +83,46 @@ export const work = [
     },
 ];
 
-// `link` is optional: projects without a public repo say so instead.
+// Descriptions match cv.md's Academic Projects. `link` is optional.
 export const projects = [
     {
         name: "Raft consensus",
         lang: "Go",
-        description: "Distributed consensus library implementing Raft: leader election, log replication, and recovery from node failures.",
+        description: "Distributed consensus library in Go.",
     },
     {
         name: "MapReduce",
         lang: "Go",
-        description: "Distributed MapReduce framework that coordinates workers through the map and reduce phases.",
+        description: "Distributed MapReduce framework in Go.",
     },
     {
         name: "Sentiment analysis",
         lang: "Python",
-        description: "Classifies reviews as positive or negative, comparing TensorFlow/Keras neural networks with XGBoost decision trees.",
+        description: "Review classifier built with TensorFlow/Keras neural networks and XGBoost.",
         link: "https://github.com/Mwahhid/Sentiment-Analysis",
     },
     {
         name: "Web server",
         lang: "C",
-        description: "HTTP server built directly on TCP/IP sockets.",
+        description: "HTTP over TCP/IP, written in C.",
         link: "https://github.com/Mwahhid/Web-Server",
     },
     {
         name: "UNIX shell",
         lang: "C",
-        description: "A shell for interacting with a Linux system: running programs, built-in commands, and process control.",
+        description: "UNIX shell written in C.",
         link: "https://github.com/Mwahhid/UNIX-Shell-in-C",
-    },
+    }
 ];
 
 export const skills = [
     { group: "Cloud", items: ["Microsoft Azure", "Microsoft Foundry", "Azure API Management", "Key Vault", "ServiceNow"] },
-    { group: "Automation & IaC", items: ["PowerShell", "Python", "Bicep", "ARM templates", "Azure Functions", "Logic Apps", "Automation runbooks", "REST APIs"] },
+    { group: "Automation & IaC", items: ["PowerShell", "Python", "Bicep", "ARM templates", "Azure CLI", "Azure Functions", "Logic Apps", "Automation runbooks", "REST APIs"] },
     { group: "Identity & governance", items: ["Entra ID", "Azure RBAC", "PIM / JIT", "Azure Policy", "Management groups", "Tagging & compliance"] },
     { group: "Networking", items: ["VNets & NSGs", "Private endpoints", "Private DNS", "Virtual WAN, VPN, ExpressRoute (support)"] },
     { group: "Monitoring & reporting", items: ["Azure Monitor", "Log Analytics (KQL)", "Power BI", "Cost Management", "Splunk"] },
-    { group: "Languages", items: ["PowerShell", "Python", "KQL", "SQL", "Bash", "C#", "Java", "Go", "C", "JavaScript"] },
+    { group: "Programming", items: ["PowerShell", "Python", "KQL", "SQL", "Bash"] },
+    { group: "Coursework & academic projects", items: ["Go", "C", "C#", "Java", "JavaScript"] },
 ];
 
 export const credentials = [
